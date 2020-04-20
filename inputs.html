@@ -31,6 +31,22 @@
     <div>
       <input id="email" type="email" />
     </div>
+    <div>
+      <input id="saveButton" type="button" value="save data!" onclick="getUserData()" />
+    </div>
+    <script>
+      function getUserData() {
+        let name = document.querySelector('#name').value
+        let email = document.querySelector('#email').value
+        console.log('name is', name)
+        console.log('email is', email)
+        // alert(name + ' ' + email)
+        let userDiv = document.createElement('div')
+        userDiv.innerText = 'you inputted ' + name + ' and ' + email
+        document.querySelector('body').appendChild(userDiv)
+        document.querySelector('#name').value = ''
+        document.querySelector('#email').value = ''
+      }
     </script>
   </body>
 </html>
