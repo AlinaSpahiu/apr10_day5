@@ -67,5 +67,13 @@
       </ul>
     </div>
     <a href="/inputs.html"> GO TO INPUTS</a>
+    <script>
+      window.onload = function () {
+        let demoParagraph = document.querySelector('#demo p')
+        console.log(demoParagraph)
+        demoParagraph.innerText = 'the text has changed!'
+        document.querySelector('#demo p').innerText = 'changed again!!'
+      }
+    </script>
   </body>
 </html>
